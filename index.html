@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>PimentES</title>
+</head>
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-color: #ccd5a9;">
+        <div class="container">
+          <h2 class="titleReino">Pimenta-do-reino</h2>
+          <div class="container-description">          
+            <p>
+              O Espírito Santo é um importante produtor de pimenta-do-reino no Brasil, sendo o segundo maior produtor e exportador do país. A região Norte do estado, especialmente o município de São Mateus, concentra a maior produção. O estado produziu mais de 78.979 toneladas de pimenta-do-reino em 2023, representando mais de 60% da produção nacional. A pimenta-do-reino é o terceiro produto da pauta de exportações do agronegócio capixaba.
+            </p>
+          </div>
+        </div>
+        <img src="/img/preta/reino.png" alt="" srcset="">
+      </div>
+      <div class="swiper-slide geral">
+        <div class="container-description">          
+          <p>
+            São Mateus possui clima tropical úmido e solos férteis, ideais para o cultivo da pimenta-do-reino e da pimenta-rosa. A pimenta-do-reino exige mais manejo, mas tem alto valor comercial e mercado consolidado, sendo amplamente cultivada na região. Já a pimenta-rosa é uma planta nativa, rústica e de fácil manejo, com forte apelo no mercado gourmet e potencial de exportação.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-color: #e0b5b5;">
+        <div class="container">
+          <h2 class="titleRosa">Pimenta rosa</h2>
+          <div class="container-description">          
+            <p>
+              O Instituto Nacional da Propriedade Industrial (INPI) reconheceu a Pimenta-rosa de São Mateus (ES) como a 103ª Indicação Geográfica brasileira. O estado é o maior produtor e exportador do país, com vendas feitas para os mercados da Europa, Ásia e Estados Unidos. A delimitação da área geográfica abrange exclusivamente o município de São Mateus, no Norte do Estado, e foi registrada como Indicação de Procedência (IP).
+            </p>
+          </div>
+        </div>
+        <img src="/img/aroeira/Aroeira_Crédito Divulgação Incaper.jpg" alt="" srcset="">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      allowSlideNext: true,
+      spaceBetween: 10,
+      // autoplay: {
+      //   delay: 10000
+      // },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      
+    });
+  </script>
+</body>
+</html>
