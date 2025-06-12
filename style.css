@@ -20,11 +20,11 @@ body {
 }
 
 .swiper-slide {
-  overflow: scroll;
   padding: 5%;
-  display: flex; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
   gap: 20px;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .geral{
-  background-image: url('img/teste/bg.png');
+  background-image: url('img/bg.png');
 }
 
 .bgAroeira {
@@ -77,6 +77,20 @@ body {
 }
 
 .container {
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 8px;
+}
+
+/* .container {
   width: 40%;
   max-width: 420px;
   margin-top: -34px;
@@ -86,7 +100,11 @@ body {
   font-size: 26px;
 }
 
+*/
+
 .container-description {
+  display: flex;
+  flex-direction: row;
   padding: 10px;
   font-size: 18px;
   border-radius: 10px;
@@ -96,4 +114,6 @@ body {
   font-weight: 500;
 }
 
-
+/* .area1, .area2, .area3 {
+  visibility: hidden;
+} */
