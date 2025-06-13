@@ -37,6 +37,12 @@ body {
   font-size: 26px;
 }
 
+.title {
+  margin: 0 auto;
+  color: rgb(210, 209, 154);
+  text-shadow: 1px 1px 2px rgb(37, 35, 36);
+}
+
 .titleReino {
   color: #142F02;
 }
