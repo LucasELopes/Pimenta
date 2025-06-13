@@ -14,15 +14,16 @@
 <body>
   <div class="swiper">
     <div class="swiper-wrapper">
-      <!-- <div class="swiper-slide geral" style="background-color: #f5f5f5;">
+      <div class="swiper-slide geral" style="background-color: #f5f5f5;">
         <div class="container">
-          <div class="container-description">          
+          <h2 class="title">São Mateus: Capital Capixaba das Pimentas</h2>
+          <div class="container-description">
             <p>
               São Mateus possui clima tropical úmido e solos férteis, ideais para o cultivo da pimenta-do-reino e da pimenta-rosa. A pimenta-do-reino exige mais manejo, mas tem alto valor comercial e mercado consolidado, sendo amplamente cultivada na região. Já a pimenta-rosa é uma planta nativa, rústica e de fácil manejo, com forte apelo no mercado gourmet e potencial de exportação.
             </p>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="swiper-slide" style="background-color: #ccd5a9;">
         <div class="swiperVertical">
           <div class="swiper-wrapper">
@@ -52,6 +53,19 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="container">
+                <h2 class="titleReino">Produtos</h2>
+                <div class="container-main">
+                  <div class="container-description">
+                    <p>
+                      A pimenta-do-reino produzida em São Mateus (ES) é um dos ingredientes mais tradicionais e essenciais na culinária mundial, mas seu uso vai além da cozinha. Ela é amplamente empregada na fabricação de condimentos, temperos prontos e misturas de especiarias, conferindo sabor marcante e aroma característico a diversos produtos alimentícios. Além disso, a pimenta-do-reino é utilizada na indústria farmacêutica e cosmética, por suas propriedades anti-inflamatórias e antioxidantes, sendo incorporada em cremes, pomadas e óleos.
+                    </p>
+                  </div>
+                  <img src="img/reino/pimentaReinoProduto1.png" alt="">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -77,7 +91,7 @@
                 <div class="container-main">
                   <div class="container-description">
                     <p>
-                      A pimenta-rosa é uma especiaria delicada, de sabor levemente adocicado, floral e com um toque picante sutil. Apesar de não ser uma pimenta “ardida” como a reino, ela tem grande valor na alta gastronomia, sendo muito usada para dar elegância, aroma e sofisticação a pratos doces e salgados.
+                      A pimenta-rosa é uma especiaria delicada, de sabor levemente adocicado, floral e com um toque picante sutil. Apesar de não ser uma pimenta “ardida” como a do reino, ela tem grande valor na alta gastronomia, sendo muito usada para dar elegância, aroma e sofisticação a pratos doces e salgados.
 
                       No contexto de São Mateus (ES), onde há ocorrência nativa da planta e iniciativas de cultivo, a pimenta-rosa representa não só um ingrediente diferenciado, mas também uma oportunidade de agregar valor à culinária regional e desenvolver uma identidade gastronômica única.
 
@@ -87,72 +101,40 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="container">
+                <h2 class="titleRosa">Produtos</h2>
+                <div class="container-main">
+                  <div class="container-description">
+                    <p>
+                      A pimenta rosa cultivada em São Mateus (ES) é um ingrediente versátil e valorizado em diversos setores. Além do uso gastronômico, a pimenta rosa tem grande importância na indústria cosmética, sendo incorporada em sabonetes artesanais, cremes hidratantes e óleos essenciais, devido às suas propriedades antioxidantes e efeito revitalizante para a pele. Também é comum encontrá-la em aromatizantes de ambiente e produtos de bem-estar, que exploram seu perfume característico para promover relaxamento e conforto. O cultivo local em São Mateus contribui para o fortalecimento da economia regional, gerando produtos que unem qualidade e identidade regional.
+                    </p>
+                  </div>
+                  <img src="img/aroeira/pimentaRosaProduto1.png" id="switchImages" class="image-fade">
+                </div>  
+              </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script>
     const swiper = new Swiper('.swiper', {
       allowSlideNext: true,
       pagination: {
         el: '.swiper-pagination',
       },
-    });
+    })
 
     const swiperVertical = new Swiper('.swiperVertical', {
       direction: 'vertical',
       nested: true,
       touchReleaseOnEdges: false,
-    });
+    })
+
 
   </script>
-  <!-- <script>
-    const revealElements = () => {
-      ScrollReveal().clean('.container-description, .titleReino, .titleRosa, .container-main img');
-
-      ScrollReveal().reveal('.container-description', {
-        duration: 1000,
-        reset: true,
-        distance: '30px',
-        origin: 'bottom'
-      });
-
-      ScrollReveal().reveal('.titleReino, .titleRosa', {
-        duration: 1200,
-        distance: '50px',
-        origin: 'left',
-        reset: true
-      });
-
-      ScrollReveal().reveal('.container-main img', {
-        duration: 1200,
-        distance: '40px',
-        origin: 'right',
-        reset: true
-      });
-    };
-
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      allowSlideNext: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      on: {
-        slideChangeTransitionEnd: () => {
-          revealElements(); // reaplica ScrollReveal nos elementos visíveis
-        }
-      }
-    });
-
-    // Executa na primeira carga
-    revealElements();
-  </script> -->
 </body>
 </html>
