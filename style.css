@@ -15,7 +15,7 @@ body {
 }
 
 .swiperVertical {
-  height: 98lvh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .swiper-slide {
-  height: 100lvh;
+  height: 100dvh;
   display: flex;
   flex-direction: row;
   align-items: center;
