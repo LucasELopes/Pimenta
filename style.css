@@ -16,6 +16,7 @@ body {
 
 .swiperVertical {
   height: 98lvh;
+  overflow: hidden;
 }
 
 .swiperVertical .swiper-slide {
