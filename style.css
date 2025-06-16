@@ -59,7 +59,8 @@ body {
 }
 
 .geral,
-.bgAroeira {
+.bgAroeira,
+.bgReino {
   opacity: 0.9;
   background-size: cover;
 }
@@ -69,7 +70,11 @@ body {
 }
 
 .bgAroeira {
-  background-image: url('img/aroeira/bgAroeira.png');
+  background-image: url('img/aroeira/bgRosa.png');
+}
+
+.bgReino {
+  background-image: url('img/reino/bgReino.png');
 }
 
 .chart {
