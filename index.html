@@ -8,6 +8,9 @@
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>PimentES</title>
 </head>
@@ -113,7 +116,7 @@
                       A pimenta rosa cultivada em São Mateus (ES) é um ingrediente versátil e valorizado em diversos setores. Além do uso gastronômico, a pimenta rosa tem grande importância na indústria cosmética, sendo incorporada em sabonetes artesanais, cremes hidratantes e óleos essenciais, devido às suas propriedades antioxidantes e efeito revitalizante para a pele. Também é comum encontrá-la em aromatizantes de ambiente e produtos de bem-estar, que exploram seu perfume característico para promover relaxamento e conforto. O cultivo local em São Mateus contribui para o fortalecimento da economia regional, gerando produtos que unem qualidade e identidade regional.
                     </p>
                   </div>
-                  <img src="img/aroeira/pimentaRosaProduto2.png" id="switchImages" class="image-fade">
+                  <img src="img/aroeira/pimentaRosaProduto2.png" class="image-fade">
                 </div>  
               </div>
           </div>
@@ -123,14 +126,14 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 
   <script>
     const swiper = new Swiper('.swiper', {
       allowSlideNext: true,
       pagination: {
         el: '.swiper-pagination',
-      },
+      }
     })
 
     const swiperVertical = new Swiper('.swiperVertical', {
@@ -138,13 +141,6 @@
       nested: true,
       touchReleaseOnEdges: false,
     })
-
-    ScrollReveal({distance: '30px', duration: 1000})
-
-    ScrollReveal().reveal('.container-description', {origin: 'left'});
-    ScrollReveal().reveal('.title', {origin: 'top', duration: 500});
-    ScrollReveal().reveal('.container-main img');
-    
   </script>
 </body>
 </html>
