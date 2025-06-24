@@ -11,11 +11,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
   <link rel="stylesheet" href="style.css">
   <title>PimentES</title>
 </head>
 <body>
   <div class="swiper">
+    <a href="#" class="arrow-link-right" onclick="nextSlide(); return false;">
+      <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
+    </a>
+    <a href="#" class="arrow-link-left" onclick="prevSlide(); return false;">
+      <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+    </a>
     <div class="swiper-wrapper">
       <div class="swiper-slide geral" style="background-color: #f5f5f5;">
         <div class="container">
@@ -31,6 +38,12 @@
         </div>
       </div>
       <div class="swiper-slide bgReino" style="background-color: #ccd5a9;">
+        <!-- <a href="#" class="arrow-link-right" onclick="nextSlide(); return false;">
+          <span class="material-symbols-outlined" style="font-size:3rem;">arrow_right_alt</span>
+        </a>
+        <a href="#" class="arrow-link-left" onclick=" prevSlide(); return false;">
+          <span class="material-symbols-outlined" style="font-size:3rem;">arrow_left_alt</span>
+        </a> -->
         <div class="swiperVertical">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -131,6 +144,7 @@
   <script>
     const swiper = new Swiper('.swiper', {
       allowSlideNext: true,
+      speed: 1000,
       pagination: {
         el: '.swiper-pagination',
       }
@@ -141,6 +155,37 @@
       nested: true,
       touchReleaseOnEdges: false,
     })
+
+    swiper.on('slideChange', () => {
+      const arrowNext = document.querySelector(".arrow-link-right");
+      const arrowPrev = document.querySelector(".arrow-link-left");
+
+      if (swiper.isEnd) {
+        arrowNext.style.display = 'none';
+      } else {
+        arrowNext.style.display = 'flex';
+      }
+
+      if (swiper.isBeginning) {
+        arrowPrev.style.display = 'none';
+      } else {
+        arrowPrev.style.display = 'flex';
+      }
+    });
+
+    // Funções para avançar e voltar
+    function slideNext() {
+      swiper.slideNext();
+    }
+
+    function slidePrev() {
+      swiper.slidePrev();
+    }
+
+    // Adiciona os eventos só uma vez
+    document.querySelector(".arrow-link-right").addEventListener('click', slideNext);
+    document.querySelector(".arrow-link-left").addEventListener('click', slidePrev);
+
   </script>
 </body>
 </html>

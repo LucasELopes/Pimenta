@@ -3,6 +3,29 @@
   --blue: #4A86E8;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.10);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.arrow-link-right,
+.arrow-link-left {
+  animation: pulse 4s infinite;
+  transition: transform 0.3s;
+}
+
+.arrow-link-right:hover,
+.arrow-link-left:hover {
+  transform: scale(1.35);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -24,6 +47,7 @@ body {
 .swiperVertical {
   height: 100dvh;
   overflow: hidden;
+  position: relative;
 }
 
 .swiper-slide,
@@ -37,6 +61,8 @@ body {
   height: 100dvh;
   flex-direction: row;
   gap: 20px;
+  z-index: 10;
+  position: relative;
 }
 
 .swiper-slide h2 {
@@ -57,11 +83,11 @@ body {
 }
 
 .titleReino {
-  color: #552e21;
+  color: #e5bbad;
 }
 
 .titleRosa {
-  color: #D3262A;
+  color: #ddabab;
 }
 
 .geral,
@@ -70,6 +96,32 @@ body {
   opacity: 0.9;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.arrow-link-right,.arrow-link-left{
+  z-index: 30;
+  opacity: 0.6;
+  background-color: rgb(210, 209, 154);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  bottom: 2%;
+  position: absolute;
+}
+
+.arrow-link-right span, .arrow-link-left span {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.arrow-link-right {
+  right: 50px;
+}
+
+.arrow-link-left {
+  left: 50px;
 }
 
 .geral {
@@ -96,6 +148,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
 }
 
 .container-main {
