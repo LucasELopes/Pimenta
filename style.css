@@ -8,7 +8,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.10);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
@@ -48,6 +48,7 @@ body {
   height: 100dvh;
   overflow: hidden;
   position: relative;
+  z-index: 100;
 }
 
 .swiper-slide,
@@ -107,8 +108,20 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  bottom: 2%;
+  bottom: 50%;
   position: absolute;
+}
+
+.message-swiper {
+  position: absolute;
+  display: none;
+  bottom: 4%;
+  left: 40%;
+  z-index: 99;
+  background-color: rgb(210, 209, 154);
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
 .arrow-link-right span, .arrow-link-left span {
