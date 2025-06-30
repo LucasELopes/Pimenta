@@ -149,6 +149,10 @@ body {
   background-image: url('img/reino/bgReino.png');
 }
 
+.bgMacadamia {
+  background-image: url('img/aroeira/bgRosa.png');
+}
+
 .chart {
   box-shadow: none !important;
   object-fit: cover;
