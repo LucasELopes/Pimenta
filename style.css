@@ -91,6 +91,10 @@ body {
   color: #ddabab;
 }
 
+.titleMacadamia {
+  color: #E1CF98
+}
+
 .geral,
 .bgAroeira,
 .bgReino {
@@ -150,7 +154,8 @@ body {
 }
 
 .bgMacadamia {
-  background-image: url('img/aroeira/bgRosa.png');
+  background-image: url('img/macadamia/bgMacadame.jpg');
+  background-size: cover;
 }
 
 .chart {
