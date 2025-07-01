@@ -80,7 +80,11 @@ body {
 .title {
   margin: 0 auto;
   color: rgb(210, 209, 154);
+  position: absolute;
+  top: 10%;
+  left: 5%;
   text-shadow: 1px 1px 2px rgb(37, 35, 36);
+  font-size: 42px !important;
 }
 
 .titleReino {
@@ -142,7 +146,10 @@ body {
 }
 
 .geral {
-  background-image: url('img/bg.png');
+  background-image: url('img/geral/gif/giphy-9-1.gif');
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .bgAroeira {
