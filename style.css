@@ -1,200 +1,97 @@
-:root {
-  --pink: #C27BA0;
-  --blue: #4A86E8;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.arrow-link-right,
-.arrow-link-left {
-  animation: pulse 4s infinite;
-  transition: transform 0.3s;
-}
-
-.arrow-link-right:hover,
-.arrow-link-left:hover {
-  transform: scale(1.35);
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body, html {
   margin: 0;
-  font-family: "Outfit", sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-}
-
-.mooli-regular {
-  font-family: "Mooli", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.swiperVertical {
+  padding: 0;
   height: 100dvh;
+  width: 100dvw;
   overflow: hidden;
+}
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  height: 100%;
+}
+
+.conteudo {
   position: relative;
-  z-index: 100;
+  color: white;
+  text-align: center;
+  padding-top: 6%;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
-.swiper-slide,
-.swiperVertical .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide {
+dialog {
+  position: absolute;
+  top: 0;
+  width: 100dvw;
   height: 100dvh;
-  flex-direction: row;
-  gap: 20px;
-  z-index: 10;
-  position: relative;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 999;
 }
 
-.swiper-slide h2 {
-  font-size: 30px;
-}
-
-.swiper-slide img {
-  width: 600px;
-  height: 600px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px;
+.containerDialog {
+  opacity: initial;
+  color: red;
 }
 
 .title {
-  margin: 0 auto;
-  color: rgb(210, 209, 154);
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  text-shadow: 1px 1px 2px rgb(37, 35, 36);
-  font-size: 42px !important;
+  font-size: 34px;
+  font-weight: bold;
 }
 
-.titleReino {
-  color: #e5bbad;
-}
-
-.titleRosa {
-  color: #ddabab;
-}
-
-.titleMacadamia {
-  color: #E1CF98
-}
-
-.geral,
-.bgAroeira,
-.bgReino {
-  opacity: 0.9;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.arrow-link-right,.arrow-link-left{
-  z-index: 30;
-  opacity: 0.6;
-  background-color: rgb(210, 209, 154);
-  border-radius: 100%;
+.imgsContainer {
+  margin-top: 8%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  bottom: 50%;
-  position: absolute;
 }
 
-.message-swiper {
-  position: absolute;
-  display: none;
-  bottom: 4%;
-  left: 40%;
-  z-index: 99;
-  background-color: rgb(210, 209, 154);
-  padding: 3px 5px;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
-.arrow-link-right span, .arrow-link-left span {
-  opacity: 1;
-  color: #ffffff;
-}
-
-.arrow-link-right {
-  right: 50px;
-}
-
-.arrow-link-left {
-  left: 50px;
-}
-
-.geral {
-  background-image: url('img/geral/gif/giphy-9-1.gif');
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.bgAroeira {
-  background-image: url('img/aroeira/bgRosa.png');
-}
-
-.bgReino {
-  background-image: url('img/reino/bgReino.png');
-}
-
-.bgMacadamia {
-  background-image: url('img/macadamia/bgMacadame.jpg');
-  background-size: cover;
-}
-
-.chart {
-  box-shadow: none !important;
-  object-fit: cover;
-  width: 430px !important;
-  height: 430px !important;
-}
-
-.container {
-  max-width: 1024px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-}
-
-.container-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 13px;
-  margin-top: 8px;
-}
-
-.container-description {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  font-size: 20px;
+.imgContainer img{
+  width: 320px;
+  height: 340px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgb(53, 52, 52);
-  background-color: rgb(241, 226, 209);
-  opacity: 0.8;
-  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px black;
+  background-color: black;
+  z-index: 1;
+  transition: transform 0.3s, z-index 0s;
 }
+
+.imgContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); 
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.imgContainer:hover::before,
+.imgContainer:focus-visible::before {
+  opacity: 0;
+}
+
+.active {
+  transform: scale(1.13);
+  transition: transform 0.3s;
+  z-index: 9999; 
+  position: relative;
+}
+
+dialog {
+  position: absolute;
+}
+
+
+
