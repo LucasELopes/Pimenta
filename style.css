@@ -33,28 +33,108 @@ body, html {
 
 dialog {
   position: absolute;
-  top: 0;
   width: 100dvw;
   height: 100dvh;
-  background-color: black;
-  opacity: 0.5;
+  background-color: rgba(0, 0, 0, 0);
   z-index: 999;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0;
 }
 
-.containerDialog {
-  opacity: initial;
-  color: red;
+dialog:hover, dialog:focus {
+  border: none;
+  outline: none;
+}
+
+.containerDialogRosa {
+  color: white;
+  background-color: #F82E31;
+  
+  display: flex;
+  max-width: 1100px;
+  height: 525px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.containerDialogReino {
+  color: white;
+  background-color: #527428;
+  
+  display: flex;
+  max-width: 1100px;
+  height: 525px;
+  
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  
+  box-shadow: 0px 0px 35px black;
+}
+
+.containerDialogMacadamia {
+  color: white;
+  background-color: #9D5C46;
+  
+  display: flex;
+  max-width: 1100px;
+  height: 525px;
+  
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 30px;
+  overflow: hidden;
+  
+  box-shadow: 0px 0px 35px black;
+}
+
+.containerDialogDescription {
+  width: 35%;
+  padding: 10px;
+}
+
+.containerDialogDescription h3 {
+  margin-top: 15px;
+}
+
+.containerDialogDescription p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.containerDialogImg {
+  width: 55%;
+}
+
+.containerDialogImg img {
+  height: 100%;
+  width: 120%;
 }
 
 .title {
-  font-size: 34px;
+  font-size: 48px;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.title p {
+  font-size: 16px;
+  margin: 0;
 }
 
 .imgsContainer {
   margin-top: 8%;
   display: flex;
   justify-content: center;
+  gap: 25px;
 }
 
 .imgContainer img{
@@ -62,36 +142,42 @@ dialog {
   height: 340px;
   border-radius: 10px;
   cursor: pointer;
+  object-fit: fill;
   box-shadow: 0px 0px 5px black;
   background-color: black;
   z-index: 1;
   transition: transform 0.3s, z-index 0s;
 }
 
-.imgContainer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2); 
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.imgContainer:hover::before,
-.imgContainer:focus-visible::before {
-  opacity: 0;
+.imgContainer p {
+  font-weight: 600;
 }
 
 .active {
   transform: scale(1.13);
   transition: transform 0.3s;
-  z-index: 9999; 
+  z-index: 99; 
   position: relative;
 }
 
-dialog {
-  position: absolute;
+.infoClick {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(232, 191, 140);
+  
+  margin-bottom: 0;
+  margin-top: 70px;
+  
 }
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 
 
 
