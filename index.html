@@ -16,18 +16,25 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />  
-  <link 
-  rel="stylesheet" 
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cancel"
-  />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_circle" />
 </head>
 <body>
   
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="img/geral/video/2758322-hd_1920_1080_30fps.mp4" type="video/mp4">
   </video>
-  
+  <div>
+    <span id="playAudio" style="font-size: 74px; cursor: pointer;" class="material-symbols-outlined">
+      play_circle
+      <audio id="audioPlayer">
+        <source 
+        src="img/audio/ElevenLabs_2025-07-03T01_14_15_Liam_pre_sp100_s50_sb75_se0_b_m2.mp3" 
+        type="audio/mpeg"
+        >
+      </audio>
+    </span>
+  </div>
   <div class="conteudo">
     <div class="title">
       Conheça a agronomia Mateense
@@ -234,6 +241,20 @@
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    
+    const audio = document.getElementById("audioPlayer");
+    const playButton = document.getElementById("playAudio");
+    
+    playButton.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.currentTime = 0;
+        audio.play();
+      } else {
+        audio.pause();
+        audio.currentTime = audio.duration; // Avança para o final
+      }
+    });
+    
     const video = document.querySelector(".video-bg")
     video.playbackRate = 0.8
     

@@ -38,6 +38,15 @@ body, html {
   background-color: rgba(114, 105, 105, 0.73);
 }
 
+.material-symbols-outlined {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: rgb(232, 191, 140);
+  cursor: pointer;
+  z-index: 1000;
+  font-size: large;
+}
 
 .conteudo {
   position: relative;
